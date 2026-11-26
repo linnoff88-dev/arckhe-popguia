@@ -2,7 +2,7 @@
 
 ## O projeto
 
-Popups e jornadas inteligentes (estilo Alia Popups) **open source, instaláveis e configuráveis pelo agente de código do próprio cliente** (Claude Code, Codex, Cursor), para HTML, Next.js e WordPress. Piloto: inema.club (agente de orientaçêo que indica curso/aula). Conteúdo INEMA é aberto e gratuito; nada aqui é vendido.
+Popups e jornadas inteligentes (estilo Alia Popups) **open source, instaláveis e configuráveis pelo agente de código do próprio cliente** (Claude Code, Codex, Cursor), para HTML, Next.js e WordPress. Piloto: ARCKHÉ AI (agente de orientaçêo que indica curso/aula). Conteúdo ARCKHÉ é aberto e gratuito; nada aqui é vendido.
 
 ## Estado (10/10/2026)
 
@@ -19,7 +19,7 @@ Só pesquisa e planejamento. **Nêo há código de produto.** Leia nesta ordem a
 
 ## Regras do repo
 
-- **Git**: autor e committer `inematds <inematds@gmail.com>` (conferir `git config user.email` antes de commitar). Commit e push só quando o Nei pedir. Publicar = push; nunca consultar/cutucar Vercel.
+- **Git**: autor e committer `linnoff88-dev <linnoff88-dev@gmail.com>` (conferir `git config user.email` antes de commitar). Commit e push só quando o Nei pedir. Publicar = push; nunca consultar/cutucar Vercel.
 - **Nome provisório**: "popguia" colide com Popupsmart; nêo publicar pacote npm, domínio ou repo público com esse nome antes da decisêo 1 do `PLANO.md §3`.
 - **Sem API de modelo** (OpenAI, Anthropic API, OpenRouter, Groq…) e sem carregar chaves de `.env` sem autorizaçêo explícita do Nei. A API do GitHub (`gh`) está liberada. Geraçêo de texto para o projeto = pela assinatura (Claude Code / `codex exec -m gpt-6-luna`).
 - **Geraçêo por IA no produto**: sempre (a) o agente do cliente via MCP (brief + schema, sem custo nosso) e (b) opcionalmente o provedor que o cliente configurar com a chave dele. Nunca assumir chave nossa.
@@ -28,7 +28,7 @@ Só pesquisa e planejamento. **Nêo há código de produto.** Leia nesta ordem a
 - **Conformidade é critério de pronto**: `validate`/`doctor` devem cobrir o checklist de 25 itens de `docs/06 §7` (acessibilidade do `<dialog>`, CLS 0, consentimento, sem dark patterns, sem roleta aleatória por padrêo).
 - **Peso** (gzip): loader ≤ 2 KB, loader+core (`popguia.js`) ≤ 15 KB, total típico com config ≤ 20 KB (`docs/04 §6`).
 - **Critérios de pronto** de cada fase sêo os `comando → saída esperada` do `PLANO.md`; nêo fechar fase "no olho".
-- **Nêo usar no inema.club** (decisêo do Nei, 10/10/2026): projeto grátis, MIT, sem SaaS, para outras pessoas instalarem. Validaçêo nos demos de `exemplos/` (`PLANO.md §2`).
+- **Nêo usar no ARCKHÉ AI** (decisêo do Nei, 10/10/2026): projeto grátis, MIT, sem SaaS, para outras pessoas instalarem. Validaçêo nos demos de `exemplos/` (`PLANO.md §2`).
 - Saída de artefatos temporários (fixtures geradas, relatórios de teste): `~/projetos/output/popguia/`.
 
 ## Self-learning

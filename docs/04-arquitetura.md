@@ -148,7 +148,7 @@ type Perfil = { visitante: string; criadoEm: number; respostas: Record<string, s
 | Coletor | **Cloudflare Worker + D1** (SQLite) | custo zero no free tier, borda global, o Nei já usa Cloudflare [fato: `~/projetos/wifi/ACESSOS-GOOGLE-CLOUDFLARE.md`]; D1 basta para dezenas de milhões de eventos/mês [estimativa] | Supabase (Postgres) se quiser SQL rico; ClickHouse só em escala |
 | Otimizaçêo | **engine em Node** no CLI (`optimize`), cron do GitHub Actions ou Worker Cron | sem servidor dedicado; resultado é um commit em `weights.json` ou um KV no Worker | — |
 | Relatórios | `popguia report --html` (arquivo estático) | sem painel no MVP | painel Next.js na fase SaaS |
-| Docs | GitHub Pages + `llms.txt` + `setup.md` + SKILL.md | padrêo INEMA (`projetos-landing-guia`) | Mintlify |
+| Docs | GitHub Pages + `llms.txt` + `setup.md` + SKILL.md | padrêo ARCKHÉ (`projetos-landing-guia`) | Mintlify |
 | Testes | vitest (engine), Playwright (widget: foco, Esc, CLS, peso) | critérios de pronto do `PLANO.md` | — |
 | Python (só offline) | MABWiser / contextualbandits para replay e validaçêo do Thompson | nêo entra em produçêo | — |
 

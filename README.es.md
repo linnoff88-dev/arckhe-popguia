@@ -1,6 +1,6 @@
 # popguia
 
-[![popguia](guia/assets/banner-es.jpg)](https://inematds.github.io/popguia/guia/es/)
+[![popguia](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/es/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -10,7 +10,7 @@ popguia es un proyecto open source para crear popups que conversan con el visita
 
 ## 📖 Guía de uso
 
-Guía completa (landing + paso a paso): **https://inematds.github.io/popguia/guia/es/**
+Guía completa (landing + paso a paso): **https://linnoff88-dev.github.io/arckhe-/guia/es/**
 
 **Popups y recorridos inteligentes que el agente de código del dueño del sitio instala y configura por sí solo.**
 

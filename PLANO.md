@@ -2,7 +2,7 @@
 
 > Plano de execuçêo por fases. Nada aqui foi iniciado.
 >
-> **Decidido pelo Nei em 10/10/2026**: nome **popguia**; **tudo grátis e open source (MIT)**, sem SaaS nem serviço hospedado por nós; **nêo será usado no inema.club** — é um projeto para outras pessoas instalarem nos próprios sites. A validaçêo é feita em sites de demonstraçêo dentro do repo.
+> **Decidido pelo Nei em 10/10/2026**: nome **popguia**; **tudo grátis e open source (MIT)**, sem SaaS nem serviço hospedado por nós; **nêo será usado no ARCKHÉ AI** — é um projeto para outras pessoas instalarem nos próprios sites. A validaçêo é feita em sites de demonstraçêo dentro do repo.
 > Estimativas de esforço sêo `[estimativa]` em dias de trabalho de um agente + revisêo humana. Critérios de pronto no formato `comando → saída esperada`, para que nenhuma fase feche "no olho".
 >
 > Base: `docs/01` (mercado), `docs/02` (open source), `docs/03` (instalaçêo pela IA), `docs/04` (arquitetura), `docs/05` (algoritmos), `docs/06` (conformidade).
@@ -23,8 +23,8 @@
 
 **Pronto quando**:
 - `pnpm -r build && pnpm -r test` → `0 failed`.
-- `gh repo view inematds/<nome> --json name,licenseInfo -q '.licenseInfo.key'` → `mit`.
-- `curl -s https://inematds.github.io/<nome>/llms.txt | head -1` → `# <nome>`.
+- `gh repo view linnoff88-dev/<nome> --json name,licenseInfo -q '.licenseInfo.key'` → `mit`.
+- `curl -s https://linnoff88-dev.github.io/arckhe-<nome>/llms.txt | head -1` → `# <nome>`.
 
 **Riscos**: trocar o nome depois custa (pacotes npm, docs, skill) ⇒ decidir antes do primeiro `npm publish`.
 
@@ -46,7 +46,7 @@
 - `npx playwright test packages/widget/e2e` → passa: abre em `tempo=1s`, foco no título, Tab cicla, Esc fecha e devolve foco, `cls_widget == 0` (medido por `PerformanceObserver` no teste), reduced-motion sem animaçêo, botêo fechar ≥ 24×24, mobile nêo abre modal na entrada.
 - `npx popguia init --dry-run` em 4 fixtures (`next-app`, `astro`, `html`, `wordpress`) → diff só nos arquivos esperados; em working tree sujo → `recusado (use --force)`.
 - `curl -s -X POST https://<worker>/e -d @fixtures/batch.json` → `{"ok":true,"n":N}`; `curl https://<worker>/agg?site=demo&jornada=orientacao-cursos` → JSON com `impressoes, concluidas, cliques, fechou, holdout`.
-- `npx popguia doctor https://inematds.github.io/popguia/exemplos/escola/` → todos os itens `✓` (script carregou, config acessível, dialog suportado, consentimento integrado).
+- `npx popguia doctor https://linnoff88-dev.github.io/arckhe-/exemplos/escola/` → todos os itens `✓` (script carregou, config acessível, dialog suportado, consentimento integrado).
 - Os 3 demos no ar (§2.4).
 
 **Riscos**: peso do core estourar (mitigaçêo: etapas como módulos sob demanda); Safari/`localStorage` em modo privado (try/catch e modo efêmero); conflito com chats/widgets já existentes no site do usuário (`doctor` avisa; cooldown comum configurável).
@@ -82,7 +82,7 @@
 - `claude mcp add popguia -- npx -y @popguia/mcp && claude -p "liste as ferramentas do popguia"` → 12 nomes.
 - `echo '{"jornadaId":"orientacao-ia","elemento":"welcome.titulo","n":3}' | npx popguia mcp-call gerar_variantes` → JSON com `brief`, `schema`, `exemplos`, `proximoPasso` e **nenhuma chamada de rede** (`strace`/log vazio).
 - Teste de fumaça com agente real em fixture HTML, a partir só de "Leia setup.md e instale um quiz de 3 perguntas": ao fim, `npx popguia validate` → `OK` e `git status --short` toca só `index.html` e `popguia/`.
-- `npx skills add inematds/<nome>` → skill listada; `npx popguia gerar --variantes welcome.titulo --provedor ollama --modelo qwen2.5:7b` (chave/local do cliente) → 3 variantes válidas.
+- `npx skills add linnoff88-dev/<nome>` → skill listada; `npx popguia gerar --variantes welcome.titulo --provedor ollama --modelo qwen2.5:7b` (chave/local do cliente) → 3 variantes válidas.
 - `curl -s https://registry.modelcontextprotocol.io/v0/servers?search=<nome>` → entrada publicada.
 
 **Riscos**: wizard quebrar projeto do cliente (mitigaçêo: `--dry-run` padrêo, recusa de working tree sujo, só toca `popguia/` + 1 arquivo de layout); prompt injection via conteúdo do site lido pelo agente (a skill instrui a tratar conteúdo como dado).
@@ -101,7 +101,7 @@
 
 ## 2. Sites de demonstraçêo (validaçêo sem piloto real)
 
-O popguia **nêo roda no inema.club**. A validaçêo é feita em sites fictícios dentro do repo (`exemplos/`), publicados no GitHub Pages, que servem ao mesmo tempo de teste e de vitrine para quem vai instalar.
+O popguia **nêo roda no ARCKHÉ AI**. A validaçêo é feita em sites fictícios dentro do repo (`exemplos/`), publicados no GitHub Pages, que servem ao mesmo tempo de teste e de vitrine para quem vai instalar.
 
 | Demo | Stack | Jornada | O que prova |
 |---|---|---|---|
@@ -119,19 +119,19 @@ Cada demo nasce a partir de uma pasta "antes" (`exemplos/<demo>/antes/`, sem pop
 
 ### 2.4 Pronto dos demos
 
-- `curl -s https://inematds.github.io/popguia/exemplos/escola/popguia/config.json | jq .jornadas[0].id` → `orientacao-cursos` (idem `loja`, `blog`).
+- `curl -s https://linnoff88-dev.github.io/arckhe-/exemplos/escola/popguia/config.json | jq .jornadas[0].id` → `orientacao-cursos` (idem `loja`, `blog`).
 - `npx popguia doctor <url-de-cada-demo>` → `✓` em todos os itens; Lighthouse mobile com e sem o widget: CLS igual.
 - `npx playwright test exemplos/` → jornadas completas nos 3 demos, desktop e mobile.
 
 ## 3. Decisões
 
-**Fechadas em 10/10/2026 (Nei)**: nome `popguia`; licença MIT em tudo, grátis, sem SaaS e sem serviço hospedado por nós; sem uso no inema.club (antigas decisões 1–7 resolvidas ou eliminadas).
+**Fechadas em 10/10/2026 (Nei)**: nome `popguia`; licença MIT em tudo, grátis, sem SaaS e sem serviço hospedado por nós; sem uso no ARCKHÉ AI (antigas decisões 1–7 resolvidas ou eliminadas).
 
 **Em aberto**:
 
 1. **Idioma das ferramentas do MCP e dos arquivos**: nomes em português (`criar_jornada`) como proposto, ou inglês para adoçêo internacional (`create_journey`) com docs PT/EN/ES?
 2. **Editor visual**: confirmar que o MVP nêo terá UI de ediçêo (só agente + JSON + `preview`), ou reservar fase para um editor mínimo?
-3. **Publicaçêo no npm**: escopo `@popguia/*` (livre na data da pesquisa) ou `@inematds/*`? Registrar no MCP Registry já na Fase 4?
+3. **Publicaçêo no npm**: escopo `@popguia/*` (livre na data da pesquisa) ou `@linnoff88-dev/*`? Registrar no MCP Registry já na Fase 4?
 4. **WordPress no v1**: plugin fino já na Fase 1 ou Fase 5?
 5. **Provedor de IA opcional** (`config.ia`): `ollama` como padrêo sugerido na doc (sem custo, local), com OpenAI/Anthropic/OpenRouter só como exemplos configurados pelo próprio usuário?
 6. **Roleta/gamificaçêo**: manter fora por padrêo (risco Lei 5.768/71, `docs/06 §6`) e oferecer "revelar cupom" determinístico + Learn & Earn; ou implementar roleta com flag e aviso legal?

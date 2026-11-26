@@ -24,7 +24,7 @@ Widget TS leve · editor visual React · motor de regras declarativo · backend 
 
 Começar com regras + A/B; bandit só com volume; geraçêo assistida de jornadas por último.
 
-## Aplicaçêo INEMA
+## Aplicaçêo ARCKHÉ
 
 Popup como **agente de orientaçêo**: diagnóstico ("o que você quer dominar com IA?", "qual sua experiência?") → encaminha para aula/curso/produto certo; aprender quais jornadas geram aprendizado, engajamento, inscriçêo e venda.
 

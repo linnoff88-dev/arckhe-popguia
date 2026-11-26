@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>popguia — popups que guiam, instalados pelo seu agente de IA</title>
 <meta name="description" content="Popups e jornadas inteligentes open source (MIT) que o Claude Code, Codex ou Cursor instala e configura no seu site. Pesquisa e plano.">
-<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/popguia/guia/">
-<link rel="alternate" hreflang="en" href="https://inematds.github.io/popguia/guia/en/">
-<link rel="alternate" hreflang="es" href="https://inematds.github.io/popguia/guia/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://linnoff88-dev.github.io/arckhe-/guia/">
+<link rel="alternate" hreflang="en" href="https://linnoff88-dev.github.io/arckhe-/guia/en/">
+<link rel="alternate" hreflang="es" href="https://linnoff88-dev.github.io/arckhe-/guia/es/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -39,8 +39,8 @@
   nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
   nav .brand .emoji{font-size:1.25rem}
   nav .sep{color:var(--mut);opacity:.45}
-  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
-  nav .inema:hover{filter:brightness(1.15)}
+  nav .ARCKHÉ{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .ARCKHÉ:hover{filter:brightness(1.15)}
   nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
   nav .pro:hover{filter:brightness(1.15)}
   nav .clubpro{display:inline-flex;align-items:center;gap:6px}
@@ -107,9 +107,9 @@
   <a class="brand" href="#top"><span class="emoji">🧭</span> popguia</a>
   <span class="sep">|</span>
   <span class="clubpro">
-    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <a class="ARCKHÉ" href="https://ARCKHÉ AI" target="_blank" rel="noopener">ARCKHÉ AI</a>
     <span class="sep">-</span>
-    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+    <a class="pro" href="https://ARCKHÉ.pro" target="_blank" rel="noopener">PRO</a>
   </span>
   <div class="links">
     <a class="sec" href="#oque">O que é</a>
@@ -119,7 +119,7 @@
     <a class="sec" href="#roadmap">Roadmap</a>
     <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
     <button class="tgl" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
-    <a class="btn" href="https://github.com/inematds/popguia" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://github.com/linnoff88-dev/popguia" target="_blank" rel="noopener">GitHub</a>
   </div>
 </div></nav>
 
@@ -132,7 +132,7 @@
       <p class="lead">Quiz, recomendaçêo e cadastro em etapas no lugar do "deixe seu e-mail". Você pede ao Claude Code ou ao Codex, e ele instala e configura no seu site.</p>
       <div class="cta">
         <a class="btn" href="#guia">Começar o guia</a>
-        <a class="btn ghost" href="https://github.com/inematds/popguia" target="_blank" rel="noopener">Ver no GitHub</a>
+        <a class="btn ghost" href="https://github.com/linnoff88-dev/popguia" target="_blank" rel="noopener">Ver no GitHub</a>
       </div>
     </div>
     <figure><img src="assets/banner.jpg" alt="Banner do popguia: popups que guiam"></figure>
@@ -194,12 +194,12 @@
 <section id="guia"><div class="wrap">
   <span class="chip">Guia de uso · passo a passo</span>
   <h2>Como vai funcionar na prática</h2>
-  <p class="sub"><strong>Atençêo:</strong> os comandos abaixo sêo o desenho do plano (<a href="https://github.com/inematds/popguia/blob/main/docs/03-instalacao-pela-ia.md">docs/03</a>). Os pacotes ainda nêo foram publicados no npm. Por enquanto, o que dá para fazer é ler a pesquisa e o plano.</p>
+  <p class="sub"><strong>Atençêo:</strong> os comandos abaixo sêo o desenho do plano (<a href="https://github.com/linnoff88-dev/popguia/blob/main/docs/03-instalacao-pela-ia.md">docs/03</a>). Os pacotes ainda nêo foram publicados no npm. Por enquanto, o que dá para fazer é ler a pesquisa e o plano.</p>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Ler a pesquisa e o plano (já disponível)</h3>
     <p>Mercado, projetos open source, instalaçêo pela IA, arquitetura, algoritmos e conformidade.</p>
-<pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/popguia</span>
+<pre><span class="k">git clone</span> <span class="s">https://github.com/linnoff88-dev/popguia</span>
 <span class="k">cd</span> popguia &amp;&amp; <span class="k">cat</span> PLANO.md</pre>
   </div></div>
 
@@ -207,7 +207,7 @@
     <h3>Pedir ao agente (planejado)</h3>
     <p>Um prompt só. O agente lê o <code>setup.md</code>, adiciona a skill e o MCP e segue sozinho.</p>
 <pre><span class="c"># no Claude Code, dentro da pasta do seu site</span>
-<span class="s">"Leia https://inematds.github.io/popguia/setup.md e instale um quiz
+<span class="s">"Leia https://linnoff88-dev.github.io/arckhe-/setup.md e instale um quiz
 de 3 perguntas que recomende o produto certo para cada visitante."</span></pre>
   </div></div>
 
@@ -249,7 +249,7 @@ de 3 perguntas que recomende o produto certo para cada visitante."</span></pre>
 <section id="roadmap"><div class="wrap">
   <span class="chip">Roadmap</span>
   <h2>Fases do plano</h2>
-  <p class="sub">Cada fase só fecha com testes que provam o resultado (critérios no <a href="https://github.com/inematds/popguia/blob/main/PLANO.md">PLANO.md</a>). Hoje: pesquisa e plano concluídos.</p>
+  <p class="sub">Cada fase só fecha com testes que provam o resultado (critérios no <a href="https://github.com/linnoff88-dev/popguia/blob/main/PLANO.md">PLANO.md</a>). Hoje: pesquisa e plano concluídos.</p>
   <div class="phase"><div class="tag">Fase 0</div><div class="d"><strong>Fundaçêo</strong><span>Monorepo em TypeScript, testes automáticos, documentaçêo no GitHub Pages.</span></div></div>
   <div class="phase"><div class="tag">Fase 1</div><div class="d"><strong>Primeira versêo</strong><span>Widget, formato das jornadas, CLI e os três sites de demonstraçêo.</span></div></div>
   <div class="phase"><div class="tag">Fase 2</div><div class="d"><strong>Testes A/B</strong><span>Grupo de controle, alocaçêo estável e relatório honesto ("dados insuficientes" quando for o caso).</span></div></div>
@@ -262,8 +262,8 @@ de 3 perguntas que recomende o produto certo para cada visitante."</span></pre>
   <div class="wrap">
     <div class="pill">TypeScript</div><div class="pill">MCP</div><div class="pill">MIT</div>
     <p style="margin-top:18px">popguia · pesquisa e plano, código em breve ·
-      <a href="https://github.com/inematds/popguia">inematds/popguia</a> ·
-      <a href="https://inema.club">INEMA.CLUB</a></p>
+      <a href="https://github.com/linnoff88-dev/popguia">linnoff88-dev/popguia</a> ·
+      <a href="https://ARCKHÉ AI">ARCKHÉ AI</a></p>
   </div>
 </footer>
 

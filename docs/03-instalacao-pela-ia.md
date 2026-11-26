@@ -45,7 +45,7 @@
 | Camada | Artefato | Como chega ao agente |
 |---|---|---|
 | **A. Playbook** | `https://<docs>/setup.md` (prompt-playbook, estilo Resend/Vercel) + `llms.txt` + todas as páginas em `.md` | Usuário cola "Leia https://…/setup.md e instale no meu site"; ou botêo "Copiar prompt" no site |
-| **B. Skill** | `SKILL.md` (Agent Skills) com gatilhos "popup, jornada, quiz, lead, onboarding de visitante"; ensina a gerar jornadas a partir do conteúdo do site | `npx skills add inematds/popguia` · `claude plugin install …` (Claude Code) · Codex lê `AGENTS.md`/skills · Cursor rules |
+| **B. Skill** | `SKILL.md` (Agent Skills) com gatilhos "popup, jornada, quiz, lead, onboarding de visitante"; ensina a gerar jornadas a partir do conteúdo do site | `npx skills add linnoff88-dev/popguia` · `claude plugin install …` (Claude Code) · Codex lê `AGENTS.md`/skills · Cursor rules |
 | **C. CLI** | `npx popguia@latest init` · `add jornada <template>` · `validate` · `preview` · `doctor` · `report` · `optimize` | O agente roda; tudo com `--dry-run` e `--diff` |
 | **D. MCP local** | `npx -y @popguia/mcp` (stdio; sem conta, sem chave) — mesmo código do CLI, exposto como ferramentas | `.mcp.json` no projeto / `claude mcp add popguia -- npx -y @popguia/mcp` / deeplink Cursor / `codex mcp add` |
 | **E. MCP remoto (fase SaaS)** | `https://mcp.<dominio>/mcp` com OAuth, para métricas agregadas de vários sites | Só quando houver coletor hospedado |
@@ -112,7 +112,7 @@ O widget carrega o `config.json` depois do `load` (idle), avalia regras localmen
 
 ```
 Usuário: "Instala o popguia no meu site e cria um quiz de 3 perguntas que recomende o produto certo. Leia https://<docs>/setup.md"
-Agente:  lê setup.md → npx skills add inematds/popguia → claude mcp add popguia -- npx -y @popguia/mcp
+Agente:  lê setup.md → npx skills add linnoff88-dev/popguia → claude mcp add popguia -- npx -y @popguia/mcp
          detectar_site → {framework: html, publicDir: ".", conteudo: ["sitemap.xml", "produtos/*.html"]}
          instalar_snippet --dry-run → mostra diff → usuário aprova → aplica
          lê os produtos do site → criar_jornada(template: diagnostico, perguntas: [...], recomendacoes: {...})
