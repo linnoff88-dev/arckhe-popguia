@@ -129,7 +129,7 @@
     <div>
       <span class="chip">Open source · MIT · em planejamento</span>
       <h1>Popups que <span class="amb">guiam</span> o visitante, instalados pelo seu agente de IA</h1>
-      <p class="lead">Quiz, recomendação e cadastro em etapas no lugar do "deixe seu e-mail". Você pede ao Claude Code ou ao Codex, e ele instala e configura no seu site.</p>
+      <p class="lead">Quiz, recomendaçêo e cadastro em etapas no lugar do "deixe seu e-mail". Você pede ao Claude Code ou ao Codex, e ele instala e configura no seu site.</p>
       <div class="cta">
         <a class="btn" href="#guia">Começar o guia</a>
         <a class="btn ghost" href="https://github.com/inematds/popguia" target="_blank" rel="noopener">Ver no GitHub</a>
@@ -152,14 +152,14 @@
   <div class="grid g3">
     <div class="card"><h3>🤖 Instalado pelo agente</h3><p>Uma CLI (<code>npx popguia init</code>), um servidor MCP e uma skill ensinam o seu agente a detectar o site, colocar o script e criar as jornadas.</p></div>
     <div class="card"><h3>📁 Tudo em arquivos</h3><p>Jornadas, experimentos e pesos ficam em JSON dentro do seu repositório. Dá para revisar no git, desfazer e versionar como código.</p></div>
-    <div class="card"><h3>📈 Aprende sozinho</h3><p>Grupo de controle, teste A/B e depois um algoritmo (Thompson sampling) que manda mais visitantes para a versão que funciona melhor.</p></div>
+    <div class="card"><h3>📈 Aprende sozinho</h3><p>Grupo de controle, teste A/B e depois um algoritmo (Thompson sampling) que manda mais visitantes para a versêo que funciona melhor.</p></div>
   </div>
 </div></section>
 
 <section id="fluxo"><div class="wrap">
   <span class="chip">Como funciona</span>
   <h2>Do pedido ao agente até a jornada que se otimiza</h2>
-  <p class="sub">Os textos das variantes são escritos pelo agente do próprio usuário: o MCP entrega as instruções e o formato, sem chamar nenhuma API paga nossa.</p>
+  <p class="sub">Os textos das variantes sêo escritos pelo agente do próprio usuário: o MCP entrega as instruções e o formato, sem chamar nenhuma API paga nossa.</p>
   <div class="flow">
     <span>Você pede ao agente</span><span class="arr">→</span>
     <span>detectar_site</span><span class="arr">→</span>
@@ -172,21 +172,21 @@
   </div>
   <div class="grid g3" style="margin-top:26px">
     <div class="card"><h3>Widget leve</h3><p>Meta de até 15 KB (gzip), <code>&lt;dialog&gt;</code> acessível, sem deslocar o layout (CLS 0) e sem modal na entrada no celular.</p></div>
-    <div class="card"><h3>Gatilhos inteligentes</h3><p>Tempo, rolagem, intenção de saída, inatividade e clique, com limite de frequência e pausa depois de fechar.</p></div>
-    <div class="card"><h3>Coleta sua, não nossa</h3><p>Eventos vão para o Umami, PostHog ou GA4 que você já usa, ou para um coletor que você mesmo publica na sua conta Cloudflare.</p></div>
+    <div class="card"><h3>Gatilhos inteligentes</h3><p>Tempo, rolagem, intençêo de saída, inatividade e clique, com limite de frequência e pausa depois de fechar.</p></div>
+    <div class="card"><h3>Coleta sua, nêo nossa</h3><p>Eventos vêo para o Umami, PostHog ou GA4 que você já usa, ou para um coletor que você mesmo publica na sua conta Cloudflare.</p></div>
   </div>
 </div></section>
 
 <section id="pre"><div class="wrap">
   <span class="chip">Pré-requisitos (planejados)</span>
   <h2>O que vai ser preciso para usar</h2>
-  <p class="sub">Nada disso precisa estar pronto hoje: é o que o plano prevê para a primeira versão.</p>
+  <p class="sub">Nada disso precisa estar pronto hoje: é o que o plano prevê para a primeira versêo.</p>
   <div class="grid g3">
     <div class="card"><h3>Um agente de código</h3><p>Claude Code, Codex ou Cursor, aberto na pasta do seu site.</p><pre><span class="c"># exemplo</span>
 <span class="k">claude</span></pre></div>
     <div class="card"><h3>Node.js 20 ou mais</h3><p>Para rodar a CLI e o servidor MCP com <code>npx</code>.</p><pre><span class="c"># conferir</span>
 <span class="k">node</span> -v</pre></div>
-    <div class="card"><h3>Um site seu em git</h3><p>HTML, Next.js, Astro ou Vite (WordPress numa fase seguinte). A instalação recusa pasta com alterações não salvas.</p><pre><span class="c"># conferir</span>
+    <div class="card"><h3>Um site seu em git</h3><p>HTML, Next.js, Astro ou Vite (WordPress numa fase seguinte). A instalaçêo recusa pasta com alterações nêo salvas.</p><pre><span class="c"># conferir</span>
 <span class="k">git</span> status</pre></div>
   </div>
 </div></section>
@@ -194,11 +194,11 @@
 <section id="guia"><div class="wrap">
   <span class="chip">Guia de uso · passo a passo</span>
   <h2>Como vai funcionar na prática</h2>
-  <p class="sub"><strong>Atenção:</strong> os comandos abaixo são o desenho do plano (<a href="https://github.com/inematds/popguia/blob/main/docs/03-instalacao-pela-ia.md">docs/03</a>). Os pacotes ainda não foram publicados no npm. Por enquanto, o que dá para fazer é ler a pesquisa e o plano.</p>
+  <p class="sub"><strong>Atençêo:</strong> os comandos abaixo sêo o desenho do plano (<a href="https://github.com/inematds/popguia/blob/main/docs/03-instalacao-pela-ia.md">docs/03</a>). Os pacotes ainda nêo foram publicados no npm. Por enquanto, o que dá para fazer é ler a pesquisa e o plano.</p>
 
   <div class="step"><div class="b">1</div><div>
     <h3>Ler a pesquisa e o plano (já disponível)</h3>
-    <p>Mercado, projetos open source, instalação pela IA, arquitetura, algoritmos e conformidade.</p>
+    <p>Mercado, projetos open source, instalaçêo pela IA, arquitetura, algoritmos e conformidade.</p>
 <pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/popguia</span>
 <span class="k">cd</span> popguia &amp;&amp; <span class="k">cat</span> PLANO.md</pre>
   </div></div>
@@ -237,12 +237,12 @@ de 3 perguntas que recomende o produto certo para cada visitante."</span></pre>
 
 <section id="exemplos"><div class="wrap">
   <span class="chip">Jornadas</span>
-  <h2>Três sites de demonstração</h2>
-  <p class="sub">O plano valida o popguia em sites fictícios dentro do próprio repositório, publicados no GitHub Pages. Eles ainda serão construídos.</p>
+  <h2>Três sites de demonstraçêo</h2>
+  <p class="sub">O plano valida o popguia em sites fictícios dentro do próprio repositório, publicados no GitHub Pages. Eles ainda serêo construídos.</p>
   <div class="grid g3">
-    <div class="card"><h3>🎓 Escola (HTML)</h3><p>3 perguntas sobre objetivo e nível e indicação dos 3 cursos mais adequados de um catálogo fictício.</p></div>
+    <div class="card"><h3>🎓 Escola (HTML)</h3><p>3 perguntas sobre objetivo e nível e indicaçêo dos 3 cursos mais adequados de um catálogo fictício.</p></div>
     <div class="card"><h3>🛍️ Loja (Next.js)</h3><p>Learn &amp; Earn: o visitante aprende sobre o produto, revela um cupom e deixa o e-mail em duas etapas.</p></div>
-    <div class="card"><h3>📝 Blog (Astro)</h3><p>Newsletter em 2 etapas com gatilho de rolagem ou de saída, limite de frequência e versão para celular.</p></div>
+    <div class="card"><h3>📝 Blog (Astro)</h3><p>Newsletter em 2 etapas com gatilho de rolagem ou de saída, limite de frequência e versêo para celular.</p></div>
   </div>
 </div></section>
 
@@ -250,12 +250,12 @@ de 3 perguntas que recomende o produto certo para cada visitante."</span></pre>
   <span class="chip">Roadmap</span>
   <h2>Fases do plano</h2>
   <p class="sub">Cada fase só fecha com testes que provam o resultado (critérios no <a href="https://github.com/inematds/popguia/blob/main/PLANO.md">PLANO.md</a>). Hoje: pesquisa e plano concluídos.</p>
-  <div class="phase"><div class="tag">Fase 0</div><div class="d"><strong>Fundação</strong><span>Monorepo em TypeScript, testes automáticos, documentação no GitHub Pages.</span></div></div>
-  <div class="phase"><div class="tag">Fase 1</div><div class="d"><strong>Primeira versão</strong><span>Widget, formato das jornadas, CLI e os três sites de demonstração.</span></div></div>
-  <div class="phase"><div class="tag">Fase 2</div><div class="d"><strong>Testes A/B</strong><span>Grupo de controle, alocação estável e relatório honesto ("dados insuficientes" quando for o caso).</span></div></div>
-  <div class="phase"><div class="tag">Fase 3</div><div class="d"><strong>Bandit</strong><span>Thompson sampling por segmento, com período mínimo de exploração e simulação offline.</span></div></div>
-  <div class="phase"><div class="tag">Fase 4</div><div class="d"><strong>MCP e geração por IA</strong><span>Servidor MCP, skill, llms.txt e variantes escritas pelo agente do usuário (ou por um modelo local, como Ollama).</span></div></div>
-  <div class="phase"><div class="tag">Fase 5</div><div class="d"><strong>WordPress e mais</strong><span>Plugin WordPress, vários sites num coletor seu, personalização por contexto e EN/ES.</span></div></div>
+  <div class="phase"><div class="tag">Fase 0</div><div class="d"><strong>Fundaçêo</strong><span>Monorepo em TypeScript, testes automáticos, documentaçêo no GitHub Pages.</span></div></div>
+  <div class="phase"><div class="tag">Fase 1</div><div class="d"><strong>Primeira versêo</strong><span>Widget, formato das jornadas, CLI e os três sites de demonstraçêo.</span></div></div>
+  <div class="phase"><div class="tag">Fase 2</div><div class="d"><strong>Testes A/B</strong><span>Grupo de controle, alocaçêo estável e relatório honesto ("dados insuficientes" quando for o caso).</span></div></div>
+  <div class="phase"><div class="tag">Fase 3</div><div class="d"><strong>Bandit</strong><span>Thompson sampling por segmento, com período mínimo de exploraçêo e simulaçêo offline.</span></div></div>
+  <div class="phase"><div class="tag">Fase 4</div><div class="d"><strong>MCP e geraçêo por IA</strong><span>Servidor MCP, skill, llms.txt e variantes escritas pelo agente do usuário (ou por um modelo local, como Ollama).</span></div></div>
+  <div class="phase"><div class="tag">Fase 5</div><div class="d"><strong>WordPress e mais</strong><span>Plugin WordPress, vários sites num coletor seu, personalizaçêo por contexto e EN/ES.</span></div></div>
 </div></section>
 
 <footer>
